@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
-using WHMCS.EasyAPI.DataStores;
+using Whmcs.DataStores;
 
-namespace WHMCS.EasyAPI.Example
+namespace Whmcs.Example
 {
     class Program
     {

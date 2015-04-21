@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
-namespace WHMCS.EasyAPI.Model.Clients
+namespace Whmcs.Model.Clients
 {
     public class Client
     {

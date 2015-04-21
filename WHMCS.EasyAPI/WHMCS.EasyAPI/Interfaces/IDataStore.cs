@@ -1,6 +1,6 @@
 ﻿using System.Collections.Specialized;
 
-namespace WHMCS.EasyAPI.Interfaces
+namespace Whmcs.Interfaces
 {
     public interface IDataStore
     {

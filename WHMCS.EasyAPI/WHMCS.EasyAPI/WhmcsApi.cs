@@ -2,13 +2,13 @@
 using System.Collections.Specialized;
 using System.Net;
 using Newtonsoft.Json;
-using WHMCS.EasyAPI.Converters;
-using WHMCS.EasyAPI.Model.Products;
-using WHMCS.EasyAPI.Interfaces;
-using WHMCS.EasyAPI.Model.ClientDetails;
-using WHMCS.EasyAPI.Model.Clients;
+using Whmcs.Converters;
+using Whmcs.Interfaces;
+using Whmcs.Model.ClientDetails;
+using Whmcs.Model.Clients;
+using Whmcs.Model.Products;
 
-namespace WHMCS.EasyAPI
+namespace Whmcs
 {
     public class WhmcsApi
     {

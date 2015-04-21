@@ -2,9 +2,9 @@
 using System.Collections.Specialized;
 using System.Net;
 using System.Text;
-using WHMCS.EasyAPI.Interfaces;
+using Whmcs.Interfaces;
 
-namespace WHMCS.EasyAPI.DataStores
+namespace Whmcs.DataStores
 {
     public class DataStore : IDataStore
     {

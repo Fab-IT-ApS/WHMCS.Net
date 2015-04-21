@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using WHMCS.EasyAPI.Model.Clients;
 
-namespace WHMCS.EasyAPI.Model.ClientDetails
+namespace Whmcs.Model.ClientDetails
 {
     public class Details
     {

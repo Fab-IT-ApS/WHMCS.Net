@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace WHMCS.EasyAPI.Model.Products
+namespace Whmcs.Model.Products
 {
     public class ProductConfigoptions
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{145A515A-DCE2-4AF4-988A-52936858B900}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WHMCS.EasyAPI</RootNamespace>
-    <AssemblyName>WHMCS.EasyAPI</AssemblyName>
+    <RootNamespace>Whmcs</RootNamespace>
+    <AssemblyName>Whmcs</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
