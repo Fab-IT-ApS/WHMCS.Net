@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using WHMCS.EasyAPI.Converters;
 using WHMCS.EasyAPI.Model.Products;
 using WHMCS.EasyAPI.Interfaces;
+using WHMCS.EasyAPI.Model.ClientDetails;
 using WHMCS.EasyAPI.Model.Clients;
 
 namespace WHMCS.EasyAPI
@@ -90,6 +91,30 @@ namespace WHMCS.EasyAPI
                 {"search", searchableArguement}
             }));
         }
+
+        public ClientDetailsResponse GetClientDetails(int clientId, bool stats = true)
+        {
+            return JsonConvert.DeserializeObject<ClientDetailsResponse>(dataStore.GetData(url, new NameValueCollection
+            {
+                formData,
+                {"action", "getclientsdetails"},
+                {"clientid", clientId.ToString()},
+                {"stats", stats.ToString()}
+            }));
+        }
+        public ClientDetailsResponse GetClientDetails(string emailAddress, bool stats = true)
+        {
+            return JsonConvert.DeserializeObject<ClientDetailsResponse>(dataStore.GetData(url, new NameValueCollection
+            {
+                formData,
+                {"action", "getclientsdetails"},
+                {"email", emailAddress},
+                {"stats", stats.ToString()}
+            }));
+        }
+
+
+
 
 
         public Byte[] temp(int id)

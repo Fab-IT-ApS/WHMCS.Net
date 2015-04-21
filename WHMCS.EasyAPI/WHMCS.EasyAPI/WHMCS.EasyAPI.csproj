@@ -46,6 +46,10 @@
     <Compile Include="Converters\MD5Converter.cs" />
     <Compile Include="DataStores\DataStore.cs" />
     <Compile Include="Interfaces\IDataStore.cs" />
+    <Compile Include="Model\ClientDetails\ClientDetailsResponse.cs" />
+    <Compile Include="Model\ClientDetails\CustomField.cs" />
+    <Compile Include="Model\ClientDetails\Details.cs" />
+    <Compile Include="Model\ClientDetails\Stats.cs" />
     <Compile Include="Model\Clients\Client.cs" />
     <Compile Include="Model\Clients\Clients.cs" />
     <Compile Include="Model\Clients\ClientsResponse.cs" />
