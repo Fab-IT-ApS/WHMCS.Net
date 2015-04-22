@@ -117,14 +117,13 @@ namespace Whmcs
 
 
 
-        public Byte[] temp(int id)
+        public Byte[] temp()
         {
             NameValueCollection requestData = new NameValueCollection
             {
                 formData,
-                {"action", "getclientsdetails"},
-                {"clientid", id.ToString()},
-                {"stats", true.ToString()}
+                {"action", "getproducts"},
+                {"pid", "65"}
             };
             return new WebClient().UploadValues(url, requestData);
         }

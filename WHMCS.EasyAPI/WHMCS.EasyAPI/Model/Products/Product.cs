@@ -5,7 +5,7 @@ namespace Whmcs.Model.Products
     public class Product
     {
         [JsonProperty("pid")]
-        public int? ProductId { get; set; }
+        public int ProductId { get; set; }
 
         [JsonProperty("gid")]
         public int? GroupId { get; set; }
