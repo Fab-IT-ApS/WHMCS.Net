@@ -1,5 +1,4 @@
 ﻿using System.Collections.Specialized;
-using System.IO;
 using Whmcs.Interfaces;
 using Whmcs.Tests.TestableData;
 

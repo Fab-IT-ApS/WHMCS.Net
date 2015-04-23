@@ -1,7 +1,5 @@
-﻿using System.Collections.Specialized;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Whmcs.DataStores;
 using Whmcs.Tests.Testables;
 
 namespace Whmcs.Tests
@@ -10,25 +8,32 @@ namespace Whmcs.Tests
     public class TestProducts
     {
         private WhmcsApi whmcsApi;
-        private TestableDataStore testableDataStore;
 
         [TestInitialize]
         public void TestInitialize()
         {
-            testableDataStore = new TestableDataStore();
-            whmcsApi = new WhmcsApi("x", "y", "z", true, testableDataStore);
+            whmcsApi = new WhmcsApi("X", "Y", "Z", true, new TestableDataStore());
         }
 
         [TestMethod]
-        public void Test()
+        public void TestGetProdctByProductId()
         {
-            //Arrange
+            var results = whmcsApi.GetProductsByProductId(98);
+            Assert.AreEqual(98, results.Products.Product.FirstOrDefault().ProductId);
+        }
 
-            //Act
+        [TestMethod]
+        public void TestGetProductByGroupId()
+        {
+            var results = whmcsApi.GetProductsByGroupId(25);
+            Assert.AreEqual(25, results.Products.Product.FirstOrDefault().GroupId);
+        }
+
+        [TestMethod]
+        public void TestGetProducts()
+        {
             var results = whmcsApi.GetProducts();
-
-            //Assert
-            Assert.AreEqual(65, results.Products.Product.FirstOrDefault().ProductId); 
+            Assert.AreEqual(98, results.Products.Product.FirstOrDefault().ProductId);
         }
     }
 }

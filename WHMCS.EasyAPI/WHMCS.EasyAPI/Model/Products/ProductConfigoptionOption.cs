@@ -9,5 +9,12 @@ namespace Whmcs.Model.Products
 
         [JsonProperty("name")]
         public string Name { get; set; }
+
+        [JsonProperty("recurring")]
+        public int Recurring { get; set; }
+
+        [JsonProperty("pricing")]
+        public ProductPricing Pricing { get; set; }
+        
     }
 }

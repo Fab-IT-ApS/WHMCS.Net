@@ -13,7 +13,7 @@ namespace Whmcs.Model.Products
         [JsonProperty("msetupfee")]
         public double? MonthlySetupFee { get; set; }
 
-        [JsonProperty("QuarterlySetupFee")]
+        [JsonProperty("qsetupfee")]
         public double? QuarterlySetupFee { get; set; }
 
         [JsonProperty("ssetupfee")]

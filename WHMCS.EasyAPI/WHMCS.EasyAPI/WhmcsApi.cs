@@ -42,7 +42,7 @@ namespace Whmcs
                 {"action", "getproducts"}
             }));
         }
-        public ProductsResponse GetProductsByProductID(int productId)
+        public ProductsResponse GetProductsByProductId(int productId)
         {
             return JsonConvert.DeserializeObject<ProductsResponse>(dataStore.GetData(url, new NameValueCollection
             {
@@ -51,7 +51,7 @@ namespace Whmcs
                 {"pid", productId.ToString()}
             }));
         }
-        public ProductsResponse GetProductsByGroupID(int groupId)
+        public ProductsResponse GetProductsByGroupId(int groupId)
         {
             return JsonConvert.DeserializeObject<ProductsResponse>(dataStore.GetData(url, new NameValueCollection
             {
@@ -92,7 +92,7 @@ namespace Whmcs
             }));
         }
 
-        public ClientDetailsResponse GetClientDetails(int clientId, bool stats = true)
+        public ClientDetailsResponse GetClientDetailsByClientId(int clientId, bool stats = true)
         {
             return JsonConvert.DeserializeObject<ClientDetailsResponse>(dataStore.GetData(url, new NameValueCollection
             {
@@ -102,7 +102,7 @@ namespace Whmcs
                 {"stats", stats.ToString()}
             }));
         }
-        public ClientDetailsResponse GetClientDetails(string emailAddress, bool stats = true)
+        public ClientDetailsResponse GetClientDetailsByEmail(string emailAddress, bool stats = true)
         {
             return JsonConvert.DeserializeObject<ClientDetailsResponse>(dataStore.GetData(url, new NameValueCollection
             {
@@ -123,9 +123,19 @@ namespace Whmcs
             {
                 formData,
                 {"action", "getproducts"},
-                {"pid", "65"}
+                {"pid", "98"}
             };
             return new WebClient().UploadValues(url, requestData);
+        }
+
+        public string GetDataTemp()
+        {
+            return dataStore.GetData(url, new NameValueCollection
+            {
+                formData,
+                {"action", "getproducts"},
+                {"pid", "98"}
+            });
         }
 
     }
