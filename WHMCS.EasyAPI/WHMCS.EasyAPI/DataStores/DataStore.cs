@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.Net;
 using System.Text;
+using Whmcs.Exception;
 using Whmcs.Interfaces;
 
 namespace Whmcs.DataStores
@@ -12,12 +12,23 @@ namespace Whmcs.DataStores
         {
             try
             {
-                byte[] webResponse = new WebClient().UploadValues(url, values);
+                var webResponse = new WebClient().UploadValues(url, values);
                 return Encoding.ASCII.GetString(webResponse);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
-                throw new Exception("Unable to connect to WHMCS API. " + ex.Message);
+                if (ex.Message.Contains("403"))
+                {
+                    throw new ApiConnectionFailedException("Unable to connect to WHMCS API: Wrong username or password. Access Denied.", ex);
+                }
+                else if (ex.Message.Contains("404"))          
+                {
+                    throw new ApiConnectionFailedException("Unable to connect to: " + url + ".", ex);
+                }
+                else
+                {
+                    throw new ApiConnectionFailedException("Unable to connect to WHMCS API. " + ex.Message);
+                }
             }
         }
     }
