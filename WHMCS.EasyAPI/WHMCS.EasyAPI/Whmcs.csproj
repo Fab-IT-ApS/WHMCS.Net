@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Converters\MD5Converter.cs" />
     <Compile Include="DataStores\DataStore.cs" />
-    <Compile Include="Exception\ApiConnectionFailedException.cs" />
     <Compile Include="Interfaces\IDataStore.cs" />
     <Compile Include="Model\ClientDetails\ClientDetailsResponse.cs" />
     <Compile Include="Model\ClientDetails\CustomField.cs" />

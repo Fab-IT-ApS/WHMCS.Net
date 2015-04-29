@@ -16,13 +16,6 @@ namespace Whmcs.Tests
         }
 
         [TestMethod]
-        public void TestGetProducts()
-        {
-            var results = whmcsApi.GetProducts();
-            Assert.AreEqual(98, results.Products.Product.FirstOrDefault().ProductId);
-        }
-
-        [TestMethod]
         public void TestGetProdctByProductId()
         {
             var results = whmcsApi.GetProductsByProductId(98);
@@ -34,6 +27,13 @@ namespace Whmcs.Tests
         {
             var results = whmcsApi.GetProductsByGroupId(25);
             Assert.AreEqual(25, results.Products.Product.FirstOrDefault().GroupId);
+        }
+
+        [TestMethod]
+        public void TestGetProducts()
+        {
+            var results = whmcsApi.GetProducts();
+            Assert.AreEqual(98, results.Products.Product.FirstOrDefault().ProductId);
         }
     }
 }

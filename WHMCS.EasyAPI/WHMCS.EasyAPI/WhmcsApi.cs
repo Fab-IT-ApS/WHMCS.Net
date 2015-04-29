@@ -76,11 +76,11 @@ namespace Whmcs
             {
                 formData,
                 {"action", "getclients"},
-                {"limitstart","0"}, // Default Value in API = 0
-                {"limitnum","999"} // Default Value in API = 25
+                {"limitstart","0"}, // Default Value in API
+                {"limitnum","25"} // Default Value in API
             }));
         }
-        public ClientsResponse SearchClientsByEmail(string searchableArguement)
+        public ClientsResponse SearchClients(string searchableArguement)
         {
             return JsonConvert.DeserializeObject<ClientsResponse>(dataStore.GetData(url, new NameValueCollection
             {
@@ -133,8 +133,8 @@ namespace Whmcs
             return dataStore.GetData(url, new NameValueCollection
             {
                 formData,
-                {"action", "getclientsdetails"},
-                {"email","Name@Company.tls"}
+                {"action", "getproducts"},
+                {"pid", "98"}
             });
         }
 

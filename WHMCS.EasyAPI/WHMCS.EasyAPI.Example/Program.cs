@@ -14,7 +14,7 @@ namespace Whmcs.Example
 
         static void Main()
         {
-            var whmcs = new WhmcsApi("CSharpAPI", "1FabTester!", "whmcsdev.fab-it.dk/shopaa", true, new DataStore());
+            var whmcs = new WhmcsApi("CSharpAPI", "1FabTester!", "whmcsdev.fab-it.dk/shop", true, new DataStore());
 
 
             var results = whmcs.GetProductsByProductId(98);
@@ -24,8 +24,12 @@ namespace Whmcs.Example
             Console.WriteLine(results2);
 
             var results3 = whmcs.temp();
-            //getPrintableVersion(results3);
+            getPrintableVersion(results3);
             
+            var tmp = @" Hello=""There"" ";
+            var tmp2 = " Hello= \"There\" ";
+            Console.WriteLine(tmp + " : " + tmp2 );
+            //Console.ReadKey();
 
 
 

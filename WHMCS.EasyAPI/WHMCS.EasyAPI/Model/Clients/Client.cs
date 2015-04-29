@@ -5,7 +5,7 @@ namespace Whmcs.Model.Clients
     public class Client
     {
         [JsonProperty("id")]
-        public int? ClientId { get; set; }
+        public int? CustomerId { get; set; }
 
         [JsonProperty("firstname")]
         public string Firstname { get; set; }
