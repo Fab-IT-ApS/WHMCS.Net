@@ -12,5 +12,8 @@ namespace Whmcs.Model.ClientDetails
         
         [JsonProperty("stats")]
         public Stats Stats { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
     }
 }
