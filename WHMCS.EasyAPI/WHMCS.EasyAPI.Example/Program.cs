@@ -1,12 +1,21 @@
-﻿using Whmcs.DataStores;
+﻿using System;
+using Whmcs.Interfaces;
 
 namespace Whmcs.Example
 {
     class Program
-    {
+    {   
         static void Main()
         {
-            var whmcs = new WhmcsApi("Username", "Password", "Domain", true, new DataStore());
+            IApiService apiService = new ApiService("CSharpAPI", "1FabTester!", "whmcsdev.fab-it.dk/shop/", true);
+            IJSONService jsonService = new JSONSerivce();
+
+
+            IApiDataBroker apiDataBroker = new ApiDataBroker(apiService, jsonService);
+
+            var WhmcsApi = new WhmcsApi(apiDataBroker);
+            var tmp = WhmcsApi.GetProducts();
+            Console.WriteLine(tmp);
 
         }
     }
