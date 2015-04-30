@@ -49,7 +49,7 @@
     <Compile Include="Interfaces\IApiDataBroker.cs" />
     <Compile Include="Interfaces\IApiService.cs" />
     <Compile Include="Interfaces\IJSONService.cs" />
-    <Compile Include="JSONSerivce.cs" />
+    <Compile Include="JSONService.cs" />
     <Compile Include="Model\ClientDetails\ClientDetailsResponse.cs" />
     <Compile Include="Model\ClientDetails\CustomField.cs" />
     <Compile Include="Model\ClientDetails\Details.cs" />

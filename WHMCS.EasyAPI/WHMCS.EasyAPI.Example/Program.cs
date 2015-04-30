@@ -8,7 +8,7 @@ namespace Whmcs.Example
         static void Main()
         {
             IApiService apiService = new ApiService("CSharpAPI", "1FabTester!", "whmcsdev.fab-it.dk/shop/", true);
-            IJSONService jsonService = new JSONSerivce();
+            IJSONService jsonService = new JSONService();
 
 
             IApiDataBroker apiDataBroker = new ApiDataBroker(apiService, jsonService);
