@@ -7,12 +7,16 @@ using Whmcs.Interfaces;
 
 namespace Whmcs
 {
-    class ApiService : IApiService
+    public class ApiService : IApiService
     {
         private string url;
         private NameValueCollection apiCredentials;
-        
 
+        public ApiService(string username, string password, string domain, bool secure)
+        {
+            this.InitializeApi(username, password, domain, secure);
+        }
+        
         public void InitializeApi(string username, string password, string domain, bool secure)
         {
             var converter = new MD5Converter();
