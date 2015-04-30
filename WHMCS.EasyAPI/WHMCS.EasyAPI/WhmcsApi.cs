@@ -1,4 +1,6 @@
 ﻿using Whmcs.Interfaces;
+using Whmcs.Model.ClientDetails;
+using Whmcs.Model.Clients;
 using Whmcs.Model.Products;
 
 namespace Whmcs
@@ -15,6 +17,36 @@ namespace Whmcs
         public ProductsResponse GetProducts()
         {
             return dataBroker.GetProducts();
+        }
+        public ProductsResponse GetProductsByProductId(int productId)
+        {
+            return dataBroker.GetProductsByProductId(productId);
+        }
+        public ProductsResponse GetProductsByGroupId(int groupId)
+        {
+            return dataBroker.GetProductsByGroupId(groupId);
+        }
+        public ProductsResponse GetProductsByModuleName(string moduleName)
+        {
+            return dataBroker.GetProductsByModuleName(moduleName);
+        }
+
+        public ClientsResponse GetClients()
+        {
+            return dataBroker.GetClients();
+        }
+        public ClientsResponse SearchClientsByEmail(string searchArg)
+        {
+            return dataBroker.SearchClientsByEmail(searchArg);
+        }
+
+        public ClientDetailsResponse GetClientDetailsByClientId(int clientId, bool stats = true)
+        {
+            return dataBroker.GetClientDetailsByClientId(clientId, stats);
+        }
+        public ClientDetailsResponse GetClientDetailsByEmail(string emailAddress, bool stats = true)
+        {
+            return dataBroker.GetClientDetailsByEmail(emailAddress, stats);
         }
     }
 }
