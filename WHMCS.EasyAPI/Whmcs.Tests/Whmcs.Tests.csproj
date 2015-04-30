@@ -56,7 +56,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Model\Products\TestProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestApiDataBroker.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WHMCS.EasyAPI\Whmcs.csproj">
@@ -67,7 +69,6 @@
   <ItemGroup>
     <Folder Include="Model\ClientDetails\" />
     <Folder Include="Model\Clients\" />
-    <Folder Include="Model\Products\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
