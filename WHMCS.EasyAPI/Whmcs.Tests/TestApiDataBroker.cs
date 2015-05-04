@@ -36,7 +36,7 @@ namespace Whmcs.Tests
         }
 
         [Test]
-        public void GetProductsByProductId()
+        public void GetProductsByProductId_JSONServiceObjectReturned()
         {
             // Arrange
             const int testProductId = 1;
