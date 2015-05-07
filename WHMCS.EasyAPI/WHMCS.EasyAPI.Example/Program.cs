@@ -9,6 +9,11 @@ namespace Whmcs.Example
     {   
         static void Main()
         {
+            // All values here are taken from a .txt file found on the underlying path.
+            // Change the values of username, password, domain and secure, to be your own paramaters.
+            // Username and password are the credentials to your api user
+            // domain is for example MyWhmcs.Installation.net
+            // Secure is whether or not to use https.
             const string path = @"C:\Git\config files\whmcs.txt";
             var username = GetLine(path, 1); // string
             var password = GetLine(path, 2); // string
