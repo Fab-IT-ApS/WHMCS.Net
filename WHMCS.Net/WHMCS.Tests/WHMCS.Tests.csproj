@@ -66,10 +66,7 @@
       <Name>WHMCS</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\ClientDetails\" />
-    <Folder Include="Model\Clients\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

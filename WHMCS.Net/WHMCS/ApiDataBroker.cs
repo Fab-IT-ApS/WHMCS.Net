@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using WHMCS.Interfaces;
 using WHMCS.Model.ClientDetails;
 using WHMCS.Model.Clients;

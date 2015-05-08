@@ -14,7 +14,7 @@ namespace WHMCS
 
         public ApiService(string username, string password, string domain, bool secure)
         {
-            this.InitializeApi(username, password, domain, secure);
+            InitializeApi(username, password, domain, secure);
         }
         
         public void InitializeApi(string username, string password, string domain, bool secure)

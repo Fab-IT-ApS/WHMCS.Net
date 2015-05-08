@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Specialized;
+using System.Diagnostics;
 using System.IO;
-using System.Xml;
 using WHMCS.Interfaces;
 
 namespace WHMCS.Example
@@ -26,20 +25,13 @@ namespace WHMCS.Example
             IJSONService jsonService = new JSONService();
             IApiDataBroker apiDataBroker = new ApiDataBroker(apiService, jsonService);
 
-            var inputData = new NameValueCollection
-            {
-                {"action", "getcontacts"}
-            };
-
             var whmcsApi = new WhmcsApi(apiDataBroker);
-
-            var temp = whmcsApi.GetClientsByEmail("John Doe");
 
             var tmp1 = whmcsApi.GetContactsByClientId(88);
             Console.WriteLine(tmp1);
-            
-            var tmp2 = whmcsApi.GetRawJSON(inputData);
-            //getPrintableVersion(tmp2);
+
+
+
         }
 
         private static string GetLine(string fileName, int line)
@@ -59,7 +51,7 @@ namespace WHMCS.Example
             var filePath = path + @"\test.txt";
 
             File.WriteAllText(filePath, fileContent);
-            System.Diagnostics.Process.Start(filePath);
+            Process.Start(filePath);
         }
     }
 }
