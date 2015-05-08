@@ -5,10 +5,9 @@ It turns the JSON returned by the API into readable and useable classes, in DotN
 
 ## How to:
 
-*if you check out Program.cs within WHMCS.Example, theres a quick guide on how to use it.*
+*The WHMCS.Example project is used to debug in, and may change drastically. You can look there, for ways to use the API aswell*
 
-**Alternativly you can follow on here:**
-The simple version:
+**This is how the wrapper is used:**
 
 ```C#
 	string username = "UsernameOfMyWHMCSAPIUser";
