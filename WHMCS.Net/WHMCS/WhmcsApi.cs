@@ -1,6 +1,8 @@
-﻿using WHMCS.Interfaces;
+﻿using System.Collections.Specialized;
+using WHMCS.Interfaces;
 using WHMCS.Model.ClientDetails;
 using WHMCS.Model.Clients;
+using WHMCS.Model.Contacts;
 using WHMCS.Model.Products;
 
 namespace WHMCS
@@ -48,5 +50,21 @@ namespace WHMCS
         {
             return dataBroker.GetClientDetailsByEmail(emailAddress, stats);
         }
+
+        public ContactsResponse GetContacts(int limitStart = 0, int limitNum = 25)
+        {
+            return dataBroker.GetContacts(limitStart, limitNum);
+        }
+        public ContactsResponse GetContactsByClientId(int clientId, int limitStart = 0, int limitNum = 100)
+        {
+            return dataBroker.GetContactsByClientId(clientId, limitStart, limitNum);
+        }
+
+        public string GetRawJSON(NameValueCollection inputData)
+        {
+            return dataBroker.GetRawJSON(inputData);
+        }
+
+
     }
 }

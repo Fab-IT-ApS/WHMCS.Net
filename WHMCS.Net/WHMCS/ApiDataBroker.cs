@@ -3,6 +3,7 @@ using System.Collections.Specialized;
 using WHMCS.Interfaces;
 using WHMCS.Model.ClientDetails;
 using WHMCS.Model.Clients;
+using WHMCS.Model.Contacts;
 using WHMCS.Model.Products;
 
 namespace WHMCS
@@ -111,6 +112,38 @@ namespace WHMCS
 
             var apiResponse = apiService.GetData(inputData);
             return jsonService.DeserializeJSON<ClientDetailsResponse>(apiResponse);
+        }
+
+        public ContactsResponse GetContacts(int limitStart = 0, int limitNum = 25)
+        {
+            var inputData = new NameValueCollection
+            {
+                {"action", "getcontacts"},
+                {"limitstart",limitStart.ToString()},
+                {"limitnum",limitNum.ToString()}
+            };
+
+            var apiResponse = apiService.GetData(inputData);
+            return jsonService.DeserializeJSON<ContactsResponse>(apiResponse);
+        }
+
+        public ContactsResponse GetContactsByClientId(int clientId, int limitStart = 0, int limitNum = 100)
+        {
+            var inputData = new NameValueCollection
+            {
+                {"action", "getcontacts"},
+                {"userid", clientId.ToString()},
+                {"limitstart", limitStart.ToString()},
+                {"limitnum", limitNum.ToString()}
+            };
+
+            var apiResponse = apiService.GetData(inputData);
+            return jsonService.DeserializeJSON<ContactsResponse>(apiResponse);
+        }
+
+        public string GetRawJSON(NameValueCollection inputData)
+        {
+            return apiService.GetData(inputData);
         }
     }
 }
