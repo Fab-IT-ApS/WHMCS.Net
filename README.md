@@ -42,9 +42,9 @@ Initializing of the wrapper, will be made easiere in the future. For now, the ab
 
 ## Special Thanks
 
-[Ben Wallis](https://github.com/ben-wallis)
-[Moq team](https://github.com/Moq/moq4)
-[NUint team](http://www.nunit.org/)
+* [Ben Wallis](https://github.com/ben-wallis)
+* [Moq team](https://github.com/Moq/moq4)
+* [NUint team](http://www.nunit.org/)
 
 ## License
 
