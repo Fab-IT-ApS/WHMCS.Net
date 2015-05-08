@@ -1,6 +1,7 @@
 ﻿using System.Collections.Specialized;
 using WHMCS.Model.ClientDetails;
 using WHMCS.Model.Clients;
+using WHMCS.Model.ClientsProducts;
 using WHMCS.Model.Contacts;
 using WHMCS.Model.Products;
 
@@ -21,6 +22,8 @@ namespace WHMCS.Interfaces
 
         ContactsResponse GetContacts(int limitStart = 0, int limitNum = 100);
         ContactsResponse GetContactsByClientId(int clientId, int limitStart = 0, int limitNum = 100);
+
+        ClientsProductsResponse GetClientProducts(int clientId);
 
         string GetRawJSON(NameValueCollection inputData);
     }

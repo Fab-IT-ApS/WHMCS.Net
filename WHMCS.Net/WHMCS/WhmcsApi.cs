@@ -2,6 +2,7 @@
 using WHMCS.Interfaces;
 using WHMCS.Model.ClientDetails;
 using WHMCS.Model.Clients;
+using WHMCS.Model.ClientsProducts;
 using WHMCS.Model.Contacts;
 using WHMCS.Model.Products;
 
@@ -58,6 +59,11 @@ namespace WHMCS
         public ContactsResponse GetContactsByClientId(int clientId, int limitStart = 0, int limitNum = 100)
         {
             return dataBroker.GetContactsByClientId(clientId, limitStart, limitNum);
+        }
+
+        public ClientsProductsResponse GetClientProducts(int clientId)
+        {
+            return dataBroker.GetClientProducts(clientId);
         }
 
         public string GetRawJSON(NameValueCollection inputData)

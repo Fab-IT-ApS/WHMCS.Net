@@ -2,6 +2,7 @@
 using WHMCS.Interfaces;
 using WHMCS.Model.ClientDetails;
 using WHMCS.Model.Clients;
+using WHMCS.Model.ClientsProducts;
 using WHMCS.Model.Contacts;
 using WHMCS.Model.Products;
 
@@ -138,6 +139,18 @@ namespace WHMCS
 
             var apiResponse = apiService.GetData(inputData);
             return jsonService.DeserializeJSON<ContactsResponse>(apiResponse);
+        }
+
+        public ClientsProductsResponse GetClientProducts(int clientId)
+        {
+            var inputData = new NameValueCollection
+            {
+                {"action", "getclientsproducts"},
+                {"userid", clientId.ToString()},
+            };
+
+            var apiResponse = apiService.GetData(inputData);
+            return jsonService.DeserializeJSON<ClientsProductsResponse>(apiResponse);
         }
 
         public string GetRawJSON(NameValueCollection inputData)
