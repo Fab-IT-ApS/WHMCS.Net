@@ -62,25 +62,25 @@ namespace WHMCS
             return jsonService.DeserializeJSON<ProductsResponse>(apiResponse);
         }
 
-        public ClientsResponse GetClients()
+        public ClientsResponse GetClients(int limitStart = 0, int limitNum = 25)
         {
             var inputData = new NameValueCollection
             {
                 {"action", "getclients"},
-                {"limitstart","0"}, // Default Value in API = 0
-                {"limitnum","999"} // Default Value in API = 25
+                {"limitstart",limitStart.ToString()},
+                {"limitnum",limitNum.ToString()}
             };
 
             var apiResponse = apiService.GetData(inputData);
             return jsonService.DeserializeJSON<ClientsResponse>(apiResponse);
         }
-        public ClientsResponse SearchClientsByEmail(string searchArg)
+        public ClientsResponse GetClientsByEmail(string searchArg, int limitStart = 0, int limitNum = 25)
         {
             var inputData = new NameValueCollection
             {
                 {"action", "getclients"},
-                {"limitstart", "0"}, // Default Value in API
-                {"limitnum", "25"}, // Default Value in API
+                {"limitstart",limitStart.ToString()},
+                {"limitnum",limitNum.ToString()},
                 {"search", searchArg}
             };
 

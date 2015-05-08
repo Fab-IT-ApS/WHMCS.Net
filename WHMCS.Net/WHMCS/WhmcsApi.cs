@@ -5,7 +5,7 @@ using WHMCS.Model.Products;
 
 namespace WHMCS
 {
-    public class WhmcsApi
+    public class WhmcsApi : IApiDataBroker
     {
         private readonly IApiDataBroker dataBroker;
 
@@ -31,13 +31,13 @@ namespace WHMCS
             return dataBroker.GetProductsByModuleName(moduleName);
         }
 
-        public ClientsResponse GetClients()
+        public ClientsResponse GetClients(int limitStart = 0, int limitNum = 25)
         {
-            return dataBroker.GetClients();
+            return dataBroker.GetClients(limitStart, limitNum);
         }
-        public ClientsResponse SearchClientsByEmail(string searchArg)
+        public ClientsResponse GetClientsByEmail(string searchArg, int limitStart = 0, int limitNum = 25)
         {
-            return dataBroker.SearchClientsByEmail(searchArg);
+            return dataBroker.GetClientsByEmail(searchArg, limitStart, limitNum);
         }
 
         public ClientDetailsResponse GetClientDetailsByClientId(int clientId, bool stats = true)

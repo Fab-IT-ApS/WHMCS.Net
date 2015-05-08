@@ -11,10 +11,12 @@ namespace WHMCS.Interfaces
         ProductsResponse GetProductsByGroupId(int groupId);
         ProductsResponse GetProductsByModuleName(string moduleName);
 
-        ClientsResponse GetClients();
-        ClientsResponse SearchClientsByEmail(string searchArg);
+        ClientsResponse GetClients(int limitStart = 0, int limitNum = 25);
+        ClientsResponse GetClientsByEmail(string searchArg, int limitStart = 0, int limitNum = 25);
 
         ClientDetailsResponse GetClientDetailsByClientId(int clientId, bool stats = true);
         ClientDetailsResponse GetClientDetailsByEmail(string emailAddress, bool stats = true);
+
+        
     }
 }
