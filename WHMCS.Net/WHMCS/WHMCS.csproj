@@ -57,6 +57,9 @@
     <Compile Include="Model\Clients\Client.cs" />
     <Compile Include="Model\Clients\Clients.cs" />
     <Compile Include="Model\Clients\ClientsResponse.cs" />
+    <Compile Include="Model\Contacts\Contact.cs" />
+    <Compile Include="Model\Contacts\Contacts.cs" />
+    <Compile Include="Model\Contacts\ContactsResponse.cs" />
     <Compile Include="Model\Products\Product.cs" />
     <Compile Include="Model\Products\ProductConfigoption.cs" />
     <Compile Include="Model\Products\ProductConfigoptionOption.cs" />
@@ -76,7 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\ClientsProducts\" />
-    <Folder Include="Model\Contacts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
