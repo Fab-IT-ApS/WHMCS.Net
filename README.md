@@ -31,6 +31,8 @@ The /includes/api.php is automatically suffixed in code.
 Initializing of the wrapper, will be made easiere in the future. For now, the above is how it's done.
 
 ## Planned features
+Currently only getters are planned.
+
 **Implemented:**
 * [getproducts](http://docs.whmcs.com/API:Get_Products)
 * [getclientsdetails](http://docs.whmcs.com/API:Get_Clients_Details)
