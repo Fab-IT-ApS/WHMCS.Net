@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.IO;
+using System.Xml;
 using WHMCS.Interfaces;
 
 namespace WHMCS.Example
 {
     class Program
-    {   
+    {
         static void Main()
         {
             // All values here are taken from a .txt file found on the underlying path.
@@ -24,10 +26,20 @@ namespace WHMCS.Example
             IJSONService jsonService = new JSONService();
             IApiDataBroker apiDataBroker = new ApiDataBroker(apiService, jsonService);
 
-            var whmcsApi = new WhmcsApi(apiDataBroker);
-            var tmp = whmcsApi.GetProducts();
-            Console.WriteLine(tmp);
+            var inputData = new NameValueCollection
+            {
+                {"action", "getcontacts"}
+            };
 
+            var whmcsApi = new WhmcsApi(apiDataBroker);
+
+            var temp = whmcsApi.GetClientsByEmail("John Doe");
+
+            var tmp1 = whmcsApi.GetContactsByClientId(88);
+            Console.WriteLine(tmp1);
+            
+            var tmp2 = whmcsApi.GetRawJSON(inputData);
+            //getPrintableVersion(tmp2);
         }
 
         private static string GetLine(string fileName, int line)
@@ -35,11 +47,19 @@ namespace WHMCS.Example
             using (var sr = new StreamReader(fileName))
             {
                 for (var i = 1; i < line; i++)
-                { 
+                {
                     sr.ReadLine();
                 }
                 return sr.ReadLine();
             }
+        }
+        private static void getPrintableVersion(string fileContent)
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            var filePath = path + @"\test.txt";
+
+            File.WriteAllText(filePath, fileContent);
+            System.Diagnostics.Process.Start(filePath);
         }
     }
 }
