@@ -146,7 +146,7 @@ namespace WHMCS
             var inputData = new NameValueCollection
             {
                 {"action", "getclientsproducts"},
-                {"userid", clientId.ToString()},
+                {"clientid", clientId.ToString()},
             };
 
             var apiResponse = apiService.GetData(inputData);
