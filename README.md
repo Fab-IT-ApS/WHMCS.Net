@@ -36,10 +36,11 @@ Currently only getters are planned.
 * [getproducts](http://docs.whmcs.com/API:Get_Products)
 * [getclientsdetails](http://docs.whmcs.com/API:Get_Clients_Details)
 * [getclients](http://docs.whmcs.com/API:Get_Clients)
-
-**Not Implemented**
 * [getcontacts](http://docs.whmcs.com/API:Get_Contacts)
 * [getclientsproducts](http://docs.whmcs.com/API:Get_Clients_Products)
+
+**Not Implemented**
+
 
 ## Special Thanks
 
