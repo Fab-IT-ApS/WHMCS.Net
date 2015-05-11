@@ -54,6 +54,12 @@
     <Compile Include="Model\ClientDetails\CustomField.cs" />
     <Compile Include="Model\ClientDetails\Details.cs" />
     <Compile Include="Model\ClientDetails\Stats.cs" />
+    <Compile Include="Model\ClientsProducts\ClientsProduct.cs" />
+    <Compile Include="Model\ClientsProducts\ClientsProductConfigOption.cs" />
+    <Compile Include="Model\ClientsProducts\ClientsProductConfigOptions.cs" />
+    <Compile Include="Model\ClientsProducts\ClientsProductCustomField.cs" />
+    <Compile Include="Model\ClientsProducts\ClientsProductCustomFields.cs" />
+    <Compile Include="Model\ClientsProducts\ClientsProducts.cs" />
     <Compile Include="Model\ClientsProducts\ClientsProductsResponse.cs" />
     <Compile Include="Model\Clients\Client.cs" />
     <Compile Include="Model\Clients\Clients.cs" />
