@@ -5,7 +5,7 @@ namespace WHMCS.Model.ClientsProducts
 {
     public class Products
     {
-        [JsonProperty("products")]
+        [JsonProperty("product")]
         public List<Product> Product { get; set; }
     }
 }
