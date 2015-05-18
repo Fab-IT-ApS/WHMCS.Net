@@ -126,7 +126,6 @@ namespace WHMCS
             var apiResponse = apiService.GetData(inputData);
             return jsonService.DeserializeJSON<ContactsResponse>(apiResponse);
         }
-
         public ContactsResponse GetContactsByClientId(int clientId, int limitStart = 0, int limitNum = 100)
         {
             var inputData = new NameValueCollection

@@ -80,6 +80,7 @@
     <Compile Include="Model\Products\ProductsResponse.cs" />
     <Compile Include="WhmcsApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhmcsApiHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
