@@ -24,14 +24,11 @@ namespace WHMCS.Example
             IApiService apiService = new ApiService(username, password, domain, bool.Parse(secure));
             IJSONService jsonService = new JSONService();
             IApiDataBroker apiDataBroker = new ApiDataBroker(apiService, jsonService);
-
             var whmcsApi = new WhmcsApi(apiDataBroker);
 
-            var tmp1 = whmcsApi.GetContactsByClientId(88);
-            Console.WriteLine(tmp1);
-
-
-
+            // Using the Helper class
+            var apiHelper = new WhmcsApiHelper(username, password, domain, bool.Parse(secure));
+            var results = apiHelper.Api.GetContactsByClientId(88);
         }
 
         private static string GetLine(string fileName, int line)
