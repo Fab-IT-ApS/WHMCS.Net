@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using WHMCS.Interfaces;
+using WHMCS.Model.Clients;
 
 namespace WHMCS.Example
 {
@@ -28,7 +31,9 @@ namespace WHMCS.Example
 
             // Using the Helper class
             var apiHelper = new WhmcsApiHelper(username, password, domain, bool.Parse(secure));
-            var results = apiHelper.Api.GetContactsByClientId(88);
+            var results = apiHelper.Api.GetClients();
+            List<Client> myList = results.Clients.Client.ToList();
+            Console.WriteLine(results);
         }
 
         private static string GetLine(string fileName, int line)
