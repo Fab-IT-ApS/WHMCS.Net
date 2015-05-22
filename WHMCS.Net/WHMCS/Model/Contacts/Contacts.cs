@@ -6,6 +6,6 @@ namespace WHMCS.Model.Contacts
     public class Contacts
     {
         [JsonProperty("contact")]
-        public List<Contact> contact { get; set; }
+        public IEnumerable<Contact> contact { get; set; }
     }
 }

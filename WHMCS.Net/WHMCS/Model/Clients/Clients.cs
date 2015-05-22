@@ -6,6 +6,6 @@ namespace WHMCS.Model.Clients
     public class Clients
     {
         [JsonProperty("Client")]
-        public List<Client> Client { get; set; }
+        public IEnumerable<Client> Client { get; set; }
     }
 }

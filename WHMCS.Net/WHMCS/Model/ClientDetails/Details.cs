@@ -132,7 +132,7 @@ namespace WHMCS.Model.ClientDetails
         public string LastLogin { get; set; }
 
         [JsonProperty("customfields")]
-        public List<CustomField> CustomFields { get; set; }
+        public IEnumerable<CustomField> CustomFields { get; set; }
 
     }
 }

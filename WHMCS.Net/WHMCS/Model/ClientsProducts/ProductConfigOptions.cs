@@ -10,6 +10,6 @@ namespace WHMCS.Model.ClientsProducts
     public class ProductConfigOptions
     {
         [JsonProperty("configoption")]
-        public List<ProductConfigOption> ConfigOption { get; set; }
+        public IEnumerable<ProductConfigOption> ConfigOption { get; set; }
     }
 }

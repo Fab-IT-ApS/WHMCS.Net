@@ -10,6 +10,6 @@ namespace WHMCS.Model.ClientsProducts
     public class ProductCustomFields
     {
         [JsonProperty("customfield")]
-        public List<ProductCustomField> CustomField { get; set; }
+        public IEnumerable<ProductCustomField> CustomField { get; set; }
     }
 }
