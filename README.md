@@ -32,14 +32,14 @@ Initializing of the wrapper, will be made easiere in the future. For now, the ab
 ## Planned features
 Currently only getters are planned.
 
-**Implemented:**
+**Implemented Features:**
 * [getproducts](http://docs.whmcs.com/API:Get_Products)
 * [getclientsdetails](http://docs.whmcs.com/API:Get_Clients_Details)
 * [getclients](http://docs.whmcs.com/API:Get_Clients)
 * [getcontacts](http://docs.whmcs.com/API:Get_Contacts)
 * [getclientsproducts](http://docs.whmcs.com/API:Get_Clients_Products)
 
-**Not Implemented**
+**Not Implemented, But Planned Features**
 
 
 ## Special Thanks
